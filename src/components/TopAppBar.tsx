@@ -6,17 +6,14 @@ const useStyles = makeStyles((theme: Theme) => ({
   root:{
     flexGrow: 1,
   },
-  appBar: {
-    background: 'linear-gradient(to right, black 0%, green 100%)',
-  },
 }));
 
 const TopAppBar: React.FC = () => {
   const classes = useStyles();
   
   return (
-    <AppBar position="static">
-      <Toolbar className={classes.appBar}>
+    <AppBar position="static" color="transparent" elevation={0}>
+      <Toolbar>
         <Typography>
           Ian Goh
         </Typography>
