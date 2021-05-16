@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles, Theme } from '@material-ui/core/styles';
-import { Button, Grid, Typography } from '@material-ui/core';
+import { Button, Divider, Grid, Typography } from '@material-ui/core';
 import TopAppBar from '../components/TopAppBar';
 import Clock from '../components/Clock';
 
@@ -16,6 +16,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
+  },
+  content: {
+    height: '100vh',
+    width: '100%',
   }
 }));
 
@@ -25,25 +29,42 @@ const downloadResume = () => {
 
 const Main: React.FC = () => {
   const classes = useStyles();
-  
+
   return (
     <div className={classes.root}>
       <TopAppBar />
 
-      <Grid container spacing={3}>
+      <Grid className={classes.content} container justify="center" spacing={3}>
         {/* <Grid item xs={12}>
           <div className={classes.paper}>
             <Clock />
           </div>
         </Grid> */}
-        
-        
-        <Grid item xs={12}>
+
+        <Grid item>
+          <Typography display="block" variant="h3">
+            Full stack developer (MERN)
+            <Divider></Divider>
+            Software Engineer at ST Engineering
+          </Typography>
+        </Grid>
+
+        <Grid item>
+          <Typography variant="body1">
+              Experienced full stack developer, team-oriented and disciplined.
+              <br></br>
+              Independent, fast learner and is quick to adapt.
+              <br></br>
+              Certified ScrumMaster with 2 years of practicing scrum.
+            </Typography>
+        </Grid>
+
+        <Grid item>
           <div className={classes.paper}>
-            <Button 
-              variant="contained" 
-              color='secondary' 
-              onClick={() => { downloadResume(); }} 
+            <Button
+              variant="contained"
+              color='secondary'
+              onClick={() => { downloadResume(); }}
               href="https://drive.google.com/uc?export=download&id=1DW8KybrpOFSSQoAGcTqXgvOJVuUsjjv2"
             >
               <Typography>
