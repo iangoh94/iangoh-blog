@@ -12,7 +12,7 @@ const TopAppBar: React.FC = () => {
   const classes = useStyles();
   
   return (
-    <AppBar position="static" color="transparent" elevation={0}>
+    <AppBar position="static" color="transparent">
       <Toolbar>
         <Typography>
           Ian Goh

@@ -7,7 +7,7 @@ import Clock from '../components/Clock';
 const useStyles = makeStyles((theme: Theme) => ({
   root:{
     flexGrow: 1,
-    background: '#29ff74',
+    background: '#FFFFFF',
   },
   appBar: {
     background: theme.palette.primary.dark,
@@ -34,14 +34,14 @@ const Main: React.FC = () => {
     <div className={classes.root}>
       <TopAppBar />
 
-      <Grid className={classes.content} container justify="center" spacing={3}>
+      <Grid className={classes.content} container spacing={10} direction="column" alignItems="center">
         {/* <Grid item xs={12}>
           <div className={classes.paper}>
             <Clock />
           </div>
         </Grid> */}
 
-        <Grid item>
+        <Grid item justify="center">
           <Typography display="block" variant="h3">
             Full stack developer (MERN)
             <Divider></Divider>
@@ -49,7 +49,7 @@ const Main: React.FC = () => {
           </Typography>
         </Grid>
 
-        <Grid item>
+        <Grid item justify="center">
           <Typography variant="body1">
               Experienced full stack developer, team-oriented and disciplined.
               <br></br>
@@ -57,6 +57,20 @@ const Main: React.FC = () => {
               <br></br>
               Certified ScrumMaster with 2 years of practicing scrum.
             </Typography>
+        </Grid>
+
+        <Grid item>
+          <Typography>
+            Skills
+          </Typography>
+
+          <Typography>
+            React
+            Typescript
+            MongoDB
+            Git
+            Jenkins
+          </Typography>
         </Grid>
 
         <Grid item>
