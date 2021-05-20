@@ -3,6 +3,7 @@ import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Button, Divider, Grid, Typography } from '@material-ui/core';
 import TopAppBar from '../components/TopAppBar';
 import Clock from '../components/Clock';
+import { skills } from '../constants/ConstantList';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root:{
@@ -30,6 +31,10 @@ const downloadResume = () => {
 const Main: React.FC = () => {
   const classes = useStyles();
 
+  const skillsTypo = skills.map((s) => (
+    <Typography>{s}</Typography>
+  ))
+
   return (
     <div className={classes.root}>
       <TopAppBar />
@@ -53,24 +58,18 @@ const Main: React.FC = () => {
           <Typography variant="body1">
               Experienced full stack developer, team-oriented and disciplined.
               <br></br>
-              Independent, fast learner and is quick to adapt.
+              Independent, a fast learner and is quick to adapt.
               <br></br>
-              Certified ScrumMaster with 2 years of practicing scrum.
+              Certified ScrumMaster since Dec 2019
             </Typography>
         </Grid>
 
         <Grid item>
-          <Typography>
+          <Typography variant="h4">
             Skills
           </Typography>
 
-          <Typography>
-            React
-            Typescript
-            MongoDB
-            Git
-            Jenkins
-          </Typography>
+          {skillsTypo}
         </Grid>
 
         <Grid item>
