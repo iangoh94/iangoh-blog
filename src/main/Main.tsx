@@ -7,7 +7,7 @@ import selfie from '../assets/images/selfie.jpg';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root:{
-    flexGrow: 1,
+    width: '100%',
     background: '#FFFFFF',
   },
   appBar: {
@@ -37,10 +37,9 @@ const Main: React.FC = () => {
 
   return (
     <div className={classes.root}>
-      <TopAppBar />
-
-      <Grid className={classes.content} container spacing={10} direction="column" alignItems="center">
-        <Grid item container justify="center" alignItems="center" spacing={10}>
+      <Grid className={classes.content} container spacing={10} alignItems="center">
+        <TopAppBar />
+        <Grid item container justify="center" alignItems="center" spacing={10} xs={12}>
           <Grid item>
             <Typography display="block" variant="h3">
               Full stack developer (MERN)
