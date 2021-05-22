@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Button, Card, CardMedia, Divider, Grid, Typography } from '@material-ui/core';
 import TopAppBar from '../components/TopAppBar';
-import Clock from '../components/Clock';
 import { skills } from '../constants/ConstantList';
 import selfie from '../assets/images/selfie.jpg';
 
@@ -41,12 +40,6 @@ const Main: React.FC = () => {
       <TopAppBar />
 
       <Grid className={classes.content} container spacing={10} direction="column" alignItems="center">
-        {/* <Grid item xs={12}>
-          <div className={classes.paper}>
-            <Clock />
-          </div>
-        </Grid> */}
-
         <Grid item container justify="center" alignItems="center" spacing={10}>
           <Grid item>
             <Typography display="block" variant="h3">

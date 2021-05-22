@@ -1,23 +1,22 @@
 import React from 'react';
-import { makeStyles, Theme } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
-
-const useStyles = makeStyles((theme: Theme) => ({
-  root:{
-    flexGrow: 1,
-  },
-}));
+import { AppBar, Grid, Toolbar, Typography } from '@material-ui/core';
+import HowLongWereYouHere from './HowLongWereYouHere';
 
 const TopAppBar: React.FC = () => {
-  const classes = useStyles();
   
   return (
-    <AppBar position="static" color="transparent">
+    <AppBar position="sticky" color="transparent">
       <Toolbar>
-        <Typography>
-          Ian Goh
-        </Typography>
+        <Grid container direction="row" justify="space-between">
+          <Typography>
+            Ian Goh
+          </Typography>
+          
+          <HowLongWereYouHere />
+        </Grid>
+
       </Toolbar>
+
     </AppBar>
   );
 }
