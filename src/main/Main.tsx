@@ -1,9 +1,10 @@
 import React from 'react';
 import { makeStyles, Theme } from '@material-ui/core/styles';
-import { Button, Divider, Grid, Typography } from '@material-ui/core';
+import { Button, Card, CardMedia, Divider, Grid, Typography } from '@material-ui/core';
 import TopAppBar from '../components/TopAppBar';
 import Clock from '../components/Clock';
 import { skills } from '../constants/ConstantList';
+import selfie from '../assets/images/selfie.jpg';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root:{
@@ -46,12 +47,20 @@ const Main: React.FC = () => {
           </div>
         </Grid> */}
 
-        <Grid item justify="center">
-          <Typography display="block" variant="h3">
-            Full stack developer (MERN)
-            <Divider></Divider>
-            Software Engineer at ST Engineering
-          </Typography>
+        <Grid item container justify="center" alignItems="center" spacing={10}>
+          <Grid item>
+            <Typography display="block" variant="h3">
+              Full stack developer (MERN)
+              <Divider></Divider>
+              Software Engineer at ST Engineering
+            </Typography>
+          </Grid>
+
+          <Grid item>
+            <Card style={{ width: '50%' }}>
+              <CardMedia component="img" image={selfie} title="Selfie of Ian" />
+            </Card>
+          </Grid>
         </Grid>
 
         <Grid item justify="center">
