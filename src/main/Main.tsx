@@ -4,6 +4,7 @@ import { Button, Card, CardMedia, Divider, Grid, Typography } from '@material-ui
 import TopAppBar from '../components/TopAppBar';
 import { skills } from '../constants/ConstantList';
 import selfie from '../assets/images/selfie.jpg';
+import Typical from 'react-typical';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root:{
@@ -37,32 +38,41 @@ const Main: React.FC = () => {
 
   return (
     <div className={classes.root}>
-      <Grid className={classes.content} container spacing={10} alignItems="center">
-        <TopAppBar />
-        <Grid item container justify="center" alignItems="center" spacing={10} xs={12}>
-          <Grid item>
-            <Typography display="block" variant="h3">
-              Full stack developer (MERN)
-              <Divider></Divider>
-              Software Engineer at ST Engineering
-            </Typography>
-          </Grid>
-
-          <Grid item>
-            <Card style={{ width: '50%' }}>
-              <CardMedia component="img" image={selfie} title="Selfie of Ian" />
-            </Card>
-          </Grid>
+      <TopAppBar />
+      <Grid 
+        container 
+        direction="column" 
+        justify="center" 
+        alignItems="center" 
+        spacing={10} 
+        style={{ paddingTop: 20 }}
+      >
+        <Grid item container justify="center" alignItems="center" style={{ fontSize: 100, height: '90vh' }}>
+          <Typical
+            steps={['Hello!', 1000, 'I\'m Ian.', 1500]}
+            loop={Infinity}
+            wrapper="p"
+          />
         </Grid>
 
-        <Grid item justify="center">
+        <Grid item>
+          <Typography display="block" variant="h3">
+            Full stack developer (MERN)
+            <Divider></Divider>
+            Software Engineer at ST Engineering
+          </Typography>
+        </Grid>
+
+        <Grid item>
+          <Card style={{ width: '15vw' }}>
+            <CardMedia component="img" image={selfie} title="Selfie of Ian" />
+          </Card>
+        </Grid>
+
+        <Grid item>
           <Typography variant="body1">
-              Experienced full stack developer, team-oriented and disciplined.
-              <br></br>
-              Independent, a fast learner and is quick to adapt.
-              <br></br>
-              Certified ScrumMaster since Dec 2019
-            </Typography>
+            Certified ScrumMaster since Dec 2019
+          </Typography>
         </Grid>
 
         <Grid item>
