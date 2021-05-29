@@ -4,7 +4,6 @@ import { Button, Card, CardMedia, Divider, Grid, Typography } from '@material-ui
 import TopAppBar from '../components/TopAppBar';
 import { skills } from '../constants/ConstantList';
 import selfie from '../assets/images/selfie.jpg';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root:{
@@ -87,12 +86,6 @@ const Main: React.FC = () => {
               </Typography>
             </Button>
           </div>
-        </Grid>
-
-        <Grid item>
-          <Router>
-            <Link to="/horse">Horse</Link>
-          </Router>
         </Grid>
       </Grid>
     </div>
