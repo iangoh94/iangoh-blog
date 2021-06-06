@@ -61,7 +61,7 @@ const Main: React.FC = () => {
 
         <Grid item>
           <Box boxShadow={10}>
-            <Card style={{ width: '10vw' }}>
+            <Card style={{ width: '10vw', minWidth: 200 }}>
               <CardMedia component="img" image={selfie} title="Selfie of Ian" />
             </Card>
           </Box>
