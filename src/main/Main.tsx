@@ -79,7 +79,7 @@ const Main: React.FC = () => {
               variant="contained"
               color='secondary'
               onClick={() => { downloadResume(); }}
-              href="https://drive.google.com/uc?export=download&id=1QaPeoy7GYOQCFNp9lNQkgPBmSLv34eji"
+              href="https://drive.google.com/uc?export=download&id=1-Sb7ppBUV3yTS93NQWCscsGU5J28N-oj"
             >
               <Typography>
                 Click here to download my resume
