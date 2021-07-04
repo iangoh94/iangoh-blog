@@ -3,7 +3,7 @@ import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Box, Button, Card, CardMedia, Divider, Grid, Typography } from '@material-ui/core';
 import TopAppBar from '../components/TopAppBar';
 import { skills } from '../constants/ConstantList';
-import selfie from '../assets/images/selfie.jpg';
+import selfie from '../assets/images/selfie.png';
 import Typical from 'react-typical';
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -62,7 +62,7 @@ const Main: React.FC = () => {
         <Grid item>
           <Box boxShadow={10}>
             <Card style={{ width: '10vw', minWidth: 200 }}>
-              <CardMedia component="img" image={selfie} title="Selfie of Ian" />
+              <CardMedia component="img" image={selfie} title="Picture of Ian" />
             </Card>
           </Box>
         </Grid>
